@@ -51,6 +51,41 @@ print(len(c))
 
 print(c[8])
 c[8]=99
-print(c)
+print('c -->',c)
 print(len(c))
+
+# c.clear()
+# print(c)
+
+# f=c.copy()
+# print("f -->", f)
+
+# g=c.count(2)
+# print("count of 2 is:", g)
+
+# h=c.index(5, 3, 7)
+# print("Index of 5 is:", h)
+
+# c.insert(4, 55)
+# print("c list after inserting 55 in 4th index:", c)
+#
+# print(len(c))
+
+# j=c.pop()
+# print(j)
+# print(c)
+# print(len(c))
+
+# c.remove(4.3)
+# print(c)
+
+c.reverse()
+print("reverse -->", c)
+
+c.sort()
+print("sort", c)
+
+f=["swetha", "kavitha", "anjusha"]
+f.sort()
+print(f)
 
