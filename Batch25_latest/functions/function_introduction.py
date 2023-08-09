@@ -34,10 +34,10 @@ welcome_message()
 # d=sum(6,2) #positional arguments
 # print(d)
 # print(d*2)
-double(sum(6, 2))
+double(sum(6, 2)) # passing function as argument to another function
 sum(5, 5)
 sum(b=4, a=6) #keyword arguments
 sum(7, 8)
 
-print(multiplication(5, 8))
-double(multiplication(5, 8))
+print(multiplication(5, 8)) # passing user defined function as argument for pre-defined/ built-in function
+double(multiplication(5, 8)) # passing user defined function as argument for another user-defined function
