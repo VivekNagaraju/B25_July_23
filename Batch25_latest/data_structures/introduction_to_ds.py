@@ -4,10 +4,10 @@ num2=3.5
 
 # print(type(num))
 
-a=() # tuple
-b=[] # list --> completed
-c={2, 5} # set
-d={1:"Anjusha", 2 :"Kavitha"}
+a=(1, 2) # tuple
+b=[1, 2] # list --> completed
+c={1, 2} # set
+d={1:"Anjusha", 2 :"Kavitha"} #dictionary
 
 print(type(a))
 print(type(b))
