@@ -21,19 +21,19 @@ class Student:
         # Student.college="iQuest"
         print(f"Name of the student is {self.name}, ID is {self.roll_no} and college name is {Student.college}")
 
-vinayak=Student("Vinayak") #creating an object
-print(dir(vinayak))
+std1=Student("Vinayak") #creating an object
+print(dir(std1))
 print(Student.__dict__)
-vinayak.write_code(101)
-vinayak.display_details()
+std1.write_code(101)
+std1.display_details()
 # vinayak=Student("Vinayak2", 2)
 # vinayak.write_code
 
 # print(type(vinayak))
 
-chetan=Student("Chethan")
-chetan.write_code(201)
-chetan.display_details()
+std2=Student("Chethan")
+std2.write_code(201)
+std2.display_details()
 # vinayak.write_code()
 # chetan.write_code()
 # print(vinayak.name)
