@@ -1,4 +1,17 @@
-class Car():
+'''
+Abstraction: Concepts in Idea but not implemented
+
+Types of methods:
+1. Implemented methods/ concrete methods
+2. Un-implemented methods
+3. Abstract methods
+
+Abstract class contains both implemented and abstract methods
+Interfaces contains only abstract methods
+'''
+from abc import *
+
+class Car(ABC):
     def no_of_wheels(self):
         print("No of wheels is 4")
         
@@ -6,10 +19,11 @@ class Car():
         print("Car is moving forward")
         
     def move_backward(self):
-        print("Car is moving backward") # Implemented method
-        
+        print("Car is moving backward")
+    
+    @abstractmethod  
     def length_of_car(self):
-        pass # un-implemented method
+        pass
         
 class HatchBack(Car):
     def hatch_back_function(self):
@@ -17,10 +31,16 @@ class HatchBack(Car):
         
     def less_space(self):
         print("Hatchbacks have lesser space")   
+     
+    def length_of_car(self):
+        print("Length of the car is 3800mm") 
         
 class Sedan(Car):
     def sedan_function(self):
         print("This is sedan function")
+        
+    def length_of_car(self):
+        print("Length of the car is 4500mm")
         
 class SUV(Car):
     def suv_function(self):
@@ -31,6 +51,9 @@ class SUV(Car):
          
     def higher_loads(self):
         print("SUV Carries Hhigher loads")
+        
+    def length_of_car(self):
+        print("Length of the car is 6000mm")
         
         
 maruti_swift=HatchBack()
