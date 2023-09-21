@@ -19,12 +19,26 @@
 @tag
 Feature: Orange HRM Login Scenario
 
-
+	@navigateToOrangeHrm
   Scenario: Navigation to OrangeHRM Site
     Given User launches chrome browser
     When User navigates to OrangeHRM Site
     Then Validate whether user landed in OrangeHRM Site
-
+    
+	@loginToOrangeHrm
+	Scenario: Login to OrangeHRM Site
+		Given User launches chrome browser
+    When User navigates to OrangeHRM Site
+    And User logs in to OrangeHRM Site
+    Then User should be on Dashboard page
+  
+  @loginwithparameters
+  Scenario: Login to OrangeHRM site with Parameters
+  	Given User launches chrome browser
+    When User navigates to OrangeHRM Site
+    And User logs in to OrangeHRM Site with the Username "Admin1" and Password "admin"
+    Then User should be on Dashboard page
+    
   #@tag2
   #Scenario Outline: Title of your scenario outline
     #Given I want to write a step with <name>
