@@ -34,3 +34,13 @@ def step_login_to_orangehrm(context):
 @then(u'User should be on Dashboard page')
 def step_impl(context):
     pass
+
+@when(u'User logs in to OrangeHRM Site with the Username "{username}" and Password "{password}"'
+)
+def step_login_with_parameters(context, username, password):
+    username_txtbx=context.driver.find_element(By.NAME,'username')
+    username_txtbx.send_keys(username)
+    password_txtbx=context.driver.find_element(By.NAME,'password')
+    password_txtbx.send_keys(password)
+    login_btn=context.driver.find_element(By.TAG_NAME, 'button')
+    login_btn.click()

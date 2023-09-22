@@ -36,8 +36,23 @@ Feature: Orange HRM Login Scenario
   Scenario: Login to OrangeHRM site with Parameters
   	Given User launches chrome browser
     When User navigates to OrangeHRM Site
-    And User logs in to OrangeHRM Site with the Username "Admin1" and Password "admin"
+    And User logs in to OrangeHRM Site with the Username "Admin" and Password "admin123"
     Then User should be on Dashboard page
+    
+   @LoginDDT
+   Scenario Outline: Login to OrangeHRM- Data Driven Testing  
+	   	Given User launches chrome browser
+	    When User navigates to OrangeHRM Site
+	    And User logs in to OrangeHRM Site with the Username "<UserName>" and Password "<PassWord>"
+	    Then User should be on Dashboard page
+    
+    Examples:
+    |UserName|PassWord|
+    |Admin|admin123|
+    |Admin|admin1234|
+    |Admin1|admin123|
+    
+    
     
   #@tag2
   #Scenario Outline: Title of your scenario outline
