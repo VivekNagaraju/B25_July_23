@@ -16,34 +16,30 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@LoginFeature
 Feature: Orange HRM Login Scenario
 
-	@navigateToOrangeHrm
-  Scenario: Navigation to OrangeHRM Site
-    Given User launches chrome browser
-    When User navigates to OrangeHRM Site
-    Then Validate whether user landed in OrangeHRM Site
-    
-	@loginToOrangeHrm
-	Scenario: Login to OrangeHRM Site
+	Background: Pre-condtion steps for Login Scenarios
 		Given User launches chrome browser
     When User navigates to OrangeHRM Site
-    And User logs in to OrangeHRM Site
+	
+	@navigateToOrangeHrm @sanity
+  Scenario: Navigation to OrangeHRM Site
+    Then Validate whether user landed in OrangeHRM Site
+    
+	@loginToOrangeHrm @sanity
+	Scenario: Login to OrangeHRM Site
+    When User logs in to OrangeHRM Site
     Then User should be on Dashboard page
   
-  @loginwithparameters
+  @loginwithparameters @regression
   Scenario: Login to OrangeHRM site with Parameters
-  	Given User launches chrome browser
-    When User navigates to OrangeHRM Site
-    And User logs in to OrangeHRM Site with the Username "Admin" and Password "admin123"
+    When User logs in to OrangeHRM Site with the Username "Admin" and Password "admin123"
     Then User should be on Dashboard page
     
-   @LoginDDT
-   Scenario Outline: Login to OrangeHRM- Data Driven Testing  
-	   	Given User launches chrome browser
-	    When User navigates to OrangeHRM Site
-	    And User logs in to OrangeHRM Site with the Username "<UserName>" and Password "<PassWord>"
+   @LoginDDT @regression
+   Scenario Outline: Login to OrangeHRM- Data Driven Testing 
+	    When User logs in to OrangeHRM Site with the Username "<UserName>" and Password "<PassWord>"
 	    Then User should be on Dashboard page
     
     Examples:

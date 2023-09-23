@@ -20,7 +20,7 @@ def step_navigate_to_orangehrm(context):
 @then(u'Validate whether user landed in OrangeHRM Site')
 def step_validate_navigation(context):
     page_title=context.driver.title
-    my_assert.assertEqual(page_title, "OrangeHRM", "Page title doesn't match")
+    my_assert.assertEqual(page_title, "OrangeHRM12", "Page title doesn't match")
 
 @when(u'User logs in to OrangeHRM Site')    
 def step_login_to_orangehrm(context):

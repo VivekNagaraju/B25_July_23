@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"skipped","Sat Sep 23 07:53:37 IST 2023","Sat Sep 23 07:53:37 IST 2023","8","","","","","","Login to OrangeHRM- Data Driven Testing -- @1.3 ",""
+"passed","Sat Sep 23 07:51:53 IST 2023","Sat Sep 23 07:53:37 IST 2023","104612","","","","","","Login to OrangeHRM Site",""
+"skipped","Sat Sep 23 07:53:37 IST 2023","Sat Sep 23 07:53:37 IST 2023","10","","","","","","Login to OrangeHRM site with Parameters",""
+"skipped","Sat Sep 23 07:53:37 IST 2023","Sat Sep 23 07:53:37 IST 2023","22","","","","","","Login to OrangeHRM- Data Driven Testing -- @1.2 ",""
+"skipped","Sat Sep 23 07:53:37 IST 2023","Sat Sep 23 07:53:37 IST 2023","15","","","","","","Login to OrangeHRM- Data Driven Testing -- @1.1 ",""
+"failed","Sat Sep 23 07:51:21 IST 2023","Sat Sep 23 07:51:53 IST 2023","31404","","","","","","Navigation to OrangeHRM Site",""
